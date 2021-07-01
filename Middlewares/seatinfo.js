@@ -11,6 +11,6 @@ exports.seatdata = (req, res, next) => {
         client.query(`INSERT INTO SEATDB (moviename , seat ) values ('${movieName}' , '${seatno}');`);
             
     }
-    console.log("Sahi chala")
+    // console.log("Sahi chala")
     next();
 };

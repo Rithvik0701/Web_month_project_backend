@@ -5,6 +5,8 @@ const app = express();
 const authRoutes = require("./routes/auth");
 const feedbackRoutes = require("./routes/feedBack");
 const booknowRoutes = require("./routes/booknow");
+const forgotpassRoutes = require("./routes/forgotpass");
+const contactusroute = require("./routes/contactus");
 const client = require("./config/db");
 
 
@@ -22,6 +24,9 @@ client.connect(() => {
 app.get("/", (req, res) => {
     res.status(200).send("Server is up and running!!");
 });
+
+app.use("/forgotpass", forgotpassRoutes);
+app.use("/contactus", contactusroute);
 
 
 app.use("/auth", authRoutes);
