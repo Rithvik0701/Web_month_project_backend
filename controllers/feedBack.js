@@ -15,17 +15,13 @@ exports.addfeedback = (req, res) => {
       const email = decoded.email;
           
       console.log("Inside controllers");
-      // console.log(Rate.valueOf());
+
       const movieName = req.query.movieName;
       const {   staring,feedbackText } = req.body;
-      // console.log(rate);
-      // console.log(querystring.parse(url));
+
       if (rate === 0) {
         
-         // console.log(max)
-            // res.send({
-            //   max
-            // })
+    
             client.query(`INSERT INTO userfeedback (movieName , email , stars, feedbackText) values('${movieName}','${email}','${staring}' , '${feedbackText}');`)
            
               .then(() =>  res.status(200).json({

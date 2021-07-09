@@ -5,10 +5,8 @@ const { feedVerify } = require("../Middlewares/feedback");
 const router = express.Router();
 
 
-// router.get("/add", verifyToken, feedVerify);
-
 router.post("/add", verifyToken, addfeedback);
-// router.post("/add/", verifyToken,feedVerify,addfeedback2)
+
 
 
 

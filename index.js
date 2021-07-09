@@ -50,15 +50,10 @@ app.use("/contactus", contactusroute);
 
 
 app.use("/auth", authRoutes);
-// app.use("/feedback", feedback);
+
 app.use("/feedback", feedbackRoutes);
 
 app.use("/booknow", booknowRoutes);
-
-
-
-
-
 
 
 app.listen(port, () => {

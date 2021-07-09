@@ -17,7 +17,7 @@ exports.sendmail = (req, res) => {
     });
           
     var mailOptions = {
-        from: 'webtest0732@gmail.com',
+        from: 'movieplex271@gmail.com',
         to: 'rithvik0732@gmail.com ,img_2020025@iiitm.ac.in , imt_2020099@iiitm.ac.in',
         // to: 'rithvik0732@gmail.com',
         subject: 'USER FEEDBACK',
