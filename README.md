@@ -59,6 +59,7 @@ https://dazzling-torvalds-e63a8b.netlify.app
 3. Run Npm install
 4. Change apiUrl to http://localhost:3000/ where-ever hosted url is used
 5. Or else you can continue with hosted url
+6. For Testing purpose : email = man2@gmail.com , Password = 123456 , username = man2
 
 ## Team Members
 ### Siddhant Salve - 2020IMT-099
