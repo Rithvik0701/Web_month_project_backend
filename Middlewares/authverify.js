@@ -9,9 +9,10 @@ exports.verifyToken = (req, res, next) => {
         }
         console.log(decoded) // bar
         const userEmail = decoded.email;
-        client.query(`select * from users where email = '${userEmail}'`)
-        .then((data) => {
-            if (data.rows.length === 0) {
+        client.query(`select * from users where email = '${userEmail}';`)
+            .then((data) => {
+                console.log(data);
+            if (data.rows.length == 0) {
                 res.status(400).json({
                     message: "Invalid token"
                 });

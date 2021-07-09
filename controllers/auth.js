@@ -74,7 +74,8 @@ exports.signUp = (req, res) => {
                                 );
                                 res.status(200).json({
                                     message: "User added successfully",
-                                    token: token,
+                                  token: token,
+                                    username: username,
                                 })
                             })
                             .catch((err) => {
@@ -115,11 +116,13 @@ exports.signUp = (req, res) => {
 
 exports.signIn = (req, res) => {
        const { email, password } = req.body;
-  
+  console.log(email);
+  console.log(password);
         client.query(`SELECT * FROM users WHERE email = '${email}';`)
       .then((data) => {
         userData = data.rows;
-        
+        const username = data.rows[0].username;
+        console.log(username);
   
          if (userData.length === 0) {
         
@@ -145,6 +148,7 @@ exports.signIn = (req, res) => {
               res.status(200).json({
                 message: "User signed in successfully",
                 token: token,
+                username: username,
               });
             } else {
              

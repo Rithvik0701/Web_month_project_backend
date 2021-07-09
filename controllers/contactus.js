@@ -4,22 +4,22 @@ const nodemailer = require("nodemailer");
 
 exports.sendmail = (req, res) => {
     const email = req.body.email;
-    const name = req.body.name;
-    const message = req.body.Message;
+    const name = req.body.username;
+    const message = req.body.message;
 
 
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'webtest0732@gmail.com',
-            pass: 'webkriti'
+            user: 'movieplex271@gmail.com',
+            pass: 'Movie12345@'
         }
     });
           
     var mailOptions = {
         from: 'webtest0732@gmail.com',
-        // to: 'rithvik0732@gmail.com ,img_2020025@iiitm.ac.in , imt_2020099@iiitm.ac.in',
-        to: 'rithvik0732@gmail.com',
+        to: 'rithvik0732@gmail.com ,img_2020025@iiitm.ac.in , imt_2020099@iiitm.ac.in',
+        // to: 'rithvik0732@gmail.com',
         subject: 'USER FEEDBACK',
         text: ` You have recieved a message from a user on Movieplex.
             Email: ${email}

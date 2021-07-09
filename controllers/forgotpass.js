@@ -33,15 +33,15 @@ exports.mailHandler = (req, res) => {
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'webtest0732@gmail.com',
-            pass: 'webkriti'
+            user: 'movieplex271@gmail.com',
+            pass: 'Movie12345@'
         }
     });
           
     var mailOptions = {
         from: 'webtest0732@gmail.com',
         // to: 'rithvik0732@gmail.com ,imt_2020099@iiitm.ac.in , imt_2020099@iiitm.ac.in',
-        to: 'rithvik0732@gmail.com ',
+        to: `${useremail}`,
         subject: 'PASSWORD CHANGE',
         text: `Hello ${username} , Below are your details and your new password .
             Email: ${useremail}
